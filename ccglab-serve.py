@@ -4,7 +4,7 @@ import http.server
 import socketserver
 
 HTTPS = 443
-PORT = HTTPS # only https for security freaks at uni's computer center
+PORT = 8080 # only https for security freaks at uni's computer center
 
 Handler = http.server.SimpleHTTPRequestHandler
 
