@@ -1,12 +1,13 @@
+% wish.ccg
 % hello world grammar for ccglab
 % -cem bozsahin, 2019
 
-give v := v/^np: \x\y.!give !topic x y;
-i n := s/(s\np) : \p.p !i;
-you n := s/(s\np) : \p.p !you;
+i    n := s/(s\np) : \p.p !i;
 wish v := (s\np)/^vp : \p\x.!wish (p x) x;
-to c := vp/^v : \p.p;
+to   c := vp/^v : \p.p;
+give v := v/^np: \x\y.!give !topic x y;
+and  c := (@X\*@X)/*@X : \p\q\x.!and(p x)(q x);
+you  n := s/(s\np) : \p.p !you;
 hope v := (s\np)/^vp : \p\x.!hope(p x)x;
-get v := v/^np : \x\y.!get x y;
+get  v := v/^np : \x\y.!get x y;
 "a good analysis" n := s\(s/np) : \p.p !goodanalysis;
-and c := (@X\*@X)/*@X : \p\q\x.!and(p x)(q x);
