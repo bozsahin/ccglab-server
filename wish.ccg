@@ -10,4 +10,4 @@ and  c := (@X\*@X)/*@X : \p\q\x.!and(p x)(q x);
 you  n := s/(s\np) : \p.p !you;
 hope v := (s\np)/^vp : \p\x.!hope(p x)x;
 get  v := v/^np : \x\y.!get x y;
-"a good analysis" n := s\(s/np) : \p.p !goodanalysis;
+"a good analysis" n := s\(s/np) : \p.p (!good !analysis);
