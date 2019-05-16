@@ -43,4 +43,4 @@
      (SYN
       (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
        (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
-     (SEM (LAM P (P "GOODANALYSIS"))) (PARAM 1.0))))
+     (SEM (LAM P (P ("GOOD" "ANALYSIS")))) (PARAM 1.0))))
