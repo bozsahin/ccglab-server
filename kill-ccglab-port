@@ -1,0 +1,8 @@
+#!/bin/bash
+# to kill server's ports listening to ccglab port in arg 1
+listeners=$(lsof -t -i:$1)
+if [ $listeners ]; then
+	kill $listeners
+else 
+	echo "No one is listening $1"
+fi
