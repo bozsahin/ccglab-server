@@ -1,6 +1,27 @@
-\documenstyle{article}
-\usepackage{ccg-latex}
+\documentclass[11pt]{article}
+\usepackage{lscape,ccg-latex,mathptmx}
+%\addtolength{\textwidth}{6cm}
+\pagestyle{empty}
 \begin{document}
-\thispagestyle{plain}
-
+\begin{landscape}
+\scriptsize
+\begin{ccg}{10}{I & wish & to &derive & and & you &hope & to & get & a good analysis}
+{
+\cat{S\fs(S\bs NP)} & \cat{(S\bs NP)\fs VP} & \cat{VP\fs IV} & \cat{IV\fs NP}
+& \cat{(X\bs X)\fs X} & \cat{S\fs(S\bs NP)} & \cat{(S\bs NP)\fs VP} & \cat{VP\fs IV}
+& \cat{IV\fs NP} & \cat{S\bs(S\fs NP)}\\
+\lf{\lambda p.p\so{i}} & \lf{\lambda p\lambda x.\so{wish}(px)x} &\lf{\lambda p.p} &
+\lf{\lambda x\lambda y.\so{derive}xy} & \lf{\lambda p\lambda q\lambda x.\so{and}(px)(qx)} &
+\lf{\lambda p.p\so{you}} & \lf{\lambda p\lambda x.\so{hope}(px)x} &\lf{\lambda p.p} &
+\lf{\lambda x\lambda y.\so{get}xy} & \lf{\lambda p.p (\so{good}\so{analysis})} \\
+\cgline{2}{\cgfc} \\ \cgres{2}{S\fs VP}\\ \cgres{2}{ \lf{\lambda p\lambda x.\so{wish}(p\so{i})\so{i}}}\\
+\cgline{3}{\cgfc} \\ \cgres{3}{S\fs IV} \\ \cgres{2}{ \lf{\lambda p\lambda x.\so{wish}(p\so{i})\so{i}}}\\
+\cgline{4}{\cgfc} &&\cgline{4}{\cgfc}\\ \cgres{4}{S\fs NP} && \cgres{4}{S\fs NP}\\ \cgres{4}{\lf{\lambda x.\so{wish}(\so{derive}x\so{i})\so{i}}}
+&& \cgres{4}{\lf{\lambda x.\so{hope}(\so{get}x\so{you})\so{you}}}\\
+\cgline{9}{\&}\\ \cgres{9}{S\fs NP}\\ \cgres{9}{\lf{\lambda x.\so{and}(\so{wish}(\so{derive}x\so{i})\so{i})(\so{hope}(\so{get}x\so{you})\so{you})}}\\
+\cgline{10}{\cgba}\\ \cgres{10}{S} \\
+\cgres{10}{\lf{\so{and}(\so{wish}(\so{derive}(\so{good}\so{analysis})\so{i})\so{i})(\so{hope}(\so{get}(\so{good}\so{analysis})\so{you})\so{you})}}
+}
+\end{ccg}
+\end{landscape}
 \end{document}
