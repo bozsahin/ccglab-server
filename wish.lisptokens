@@ -4,10 +4,10 @@
 
 i    n  |:=|  s |/|  |(| s |\\| np |)|   |:|   |\\| p |.| p !i |;| 
 wish v  |:=|   |(| s |\\| np |)|  |/|  |^| vp  |:|   |\\| p |\\| x |.| !wish  |(| p x |)|  x |;| 
-to   c  |:=|  vp |/|  |^| v  |:|   |\\| p |.| p |;| 
-give v  |:=|  v |/|  |^| np |:|   |\\| x |\\| y |.| !give !topic x y |;| 
+to   c  |:=|  vp |/|  |^| iv  |:|   |\\| p |.| p |;| 
+derive v  |:=|  iv |/|  |^| np |:|   |\\| x |\\| y |.| !derive x y |;| 
 and  c  |:=|   |(| @X |\\|  |*| @X |)|  |/|  |*| @X  |:|   |\\| p |\\| q |\\| x |.| !and |(| p x |)|  |(| q x |)|  |;| 
 you  n  |:=|  s |/|  |(| s |\\| np |)|   |:|   |\\| p |.| p !you |;| 
 hope v  |:=|   |(| s |\\| np |)|  |/|  |^| vp  |:|   |\\| p |\\| x |.| !hope |(| p x |)| x |;| 
-get  v  |:=|  v |/|  |^| np  |:|   |\\| x |\\| y |.| !get x y |;| 
+get  v  |:=|  iv |/|  |^| np  |:|   |\\| x |\\| y |.| !get x y |;| 
 "a good analysis" n  |:=|  s |\\|  |(| s |/| np |)|   |:|   |\\| p |.| p  |(| !good !analysis |)|  |;| )

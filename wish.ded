@@ -1,53 +1,46 @@
 (DEFPARAMETER *CCG-GRAMMAR*
-    (QUOTE
-     (((KEY 1) (PHON I) (MORPH N)
-       (SYN
-        (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
-         (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
-          ((BCAT NP) (FEATS NIL)))))
-       (SEM (LAM P (P !I))) (PARAM 1.0))
-      ((KEY 2) (PHON WISH) (MORPH V)
-       (SYN
-        ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
-          ((BCAT NP) (FEATS NIL)))
-         (DIR FS) (MODAL HARMONIC) ((BCAT VP) (FEATS NIL))))
-       (SEM (LAM P (LAM X ((!WISH (P X)) X)))) (PARAM 1.0))
-      ((KEY 3) (PHON TO) (MORPH C)
-       (SYN
-        (((BCAT VP) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
-         ((BCAT V) (FEATS NIL))))
-       (SEM (LAM P P)) (PARAM 1.0))
-      ((KEY 4) (PHON GIVE) (MORPH V)
-       (SYN
-        (((BCAT V) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
-         ((BCAT NP) (FEATS NIL))))
-       (SEM (LAM X (LAM Y (((!GIVE !TOPIC) X) Y)))) (PARAM 1.0))
-      ((KEY 5) (PHON AND) (MORPH C)
-       (SYN
-        ((((BCAT @X) (FEATS NIL)) (DIR BS) (MODAL STAR)
-          ((BCAT @X) (FEATS NIL)))
-         (DIR FS) (MODAL STAR) ((BCAT @X) (FEATS NIL))))
-       (SEM (LAM P (LAM Q (LAM X ((!AND (P X)) (Q X)))))) (PARAM 1.0))
-      ((KEY 6) (PHON YOU) (MORPH N)
-       (SYN
-        (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
-         (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
-          ((BCAT NP) (FEATS NIL)))))
-       (SEM (LAM P (P !YOU))) (PARAM 1.0))
-      ((KEY 7) (PHON HOPE) (MORPH V)
-       (SYN
-        ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
-          ((BCAT NP) (FEATS NIL)))
-         (DIR FS) (MODAL HARMONIC) ((BCAT VP) (FEATS NIL))))
-       (SEM (LAM P (LAM X ((!HOPE (P X)) X)))) (PARAM 1.0))
-      ((KEY 8) (PHON GET) (MORPH V)
-       (SYN
-        (((BCAT V) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
-         ((BCAT NP) (FEATS NIL))))
-       (SEM (LAM X (LAM Y ((!GET X) Y)))) (PARAM 1.0))
-      ((KEY 9) (PHON "a good analysis") (MORPH N)
-       (SYN
-        (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
-         (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
-          ((BCAT NP) (FEATS NIL)))))
-       (SEM (LAM P (P (!GOOD !ANALYSIS)))) (PARAM 1.0)))))
+  '(((KEY 1) (PHON I) (MORPH N)
+     (SYN
+      (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
+       (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
+     (SEM (LAM P (P "I"))) (PARAM 1.0))
+    ((KEY 2) (PHON WISH) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL HARMONIC) ((BCAT VP) (FEATS NIL))))
+     (SEM (LAM P (LAM X (("WISH" (P X)) X)))) (PARAM 1.0))
+    ((KEY 3) (PHON TO) (MORPH C)
+     (SYN
+      (((BCAT VP) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
+       ((BCAT IV) (FEATS NIL))))
+     (SEM (LAM P P)) (PARAM 1.0))
+    ((KEY 4) (PHON DERIVE) (MORPH V)
+     (SYN
+      (((BCAT IV) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
+       ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (("DERIVE" X) Y)))) (PARAM 1.0))
+    ((KEY 5) (PHON AND) (MORPH C)
+     (SYN
+      ((((BCAT @X) (FEATS NIL)) (DIR BS) (MODAL STAR) ((BCAT @X) (FEATS NIL)))
+       (DIR FS) (MODAL STAR) ((BCAT @X) (FEATS NIL))))
+     (SEM (LAM P (LAM Q (LAM X (("AND" (P X)) (Q X)))))) (PARAM 1.0))
+    ((KEY 6) (PHON YOU) (MORPH N)
+     (SYN
+      (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
+       (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
+     (SEM (LAM P (P "YOU"))) (PARAM 1.0))
+    ((KEY 7) (PHON HOPE) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL HARMONIC) ((BCAT VP) (FEATS NIL))))
+     (SEM (LAM P (LAM X (("HOPE" (P X)) X)))) (PARAM 1.0))
+    ((KEY 8) (PHON GET) (MORPH V)
+     (SYN
+      (((BCAT IV) (FEATS NIL)) (DIR FS) (MODAL HARMONIC)
+       ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (("GET" X) Y)))) (PARAM 1.0))
+    ((KEY 9) (PHON "a good analysis") (MORPH N)
+     (SYN
+      (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL)
+       (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
+     (SEM (LAM P (P ("GOOD" "ANALYSIS")))) (PARAM 1.0))))
