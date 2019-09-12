@@ -16,13 +16,15 @@
 			   "/main.html"))
 (defparameter *exampleg* (list "/Users/bozsahin/myrepos/ccglab-server/wish.ccg"
 			       "/wish.ccg"))
+(defparameter *examplelog* (list "/Users/bozsahin/myrepos/ccglab-server/wish.log"
+			       "/wish.log"))
 (defparameter *icon* (list "/Users/bozsahin/myrepos/ccglab-server/ccglab2.ico"
 			   "/ccglab2.ico"))  
 (defparameter *manual* (list "/Users/bozsahin/myrepos/ccglab-server/CCGlab-manual.pdf"
 			     "/CCGlab-manual.pdf"))
 (defparameter *display* (list "/Users/bozsahin/myrepos/ccglab-server/wish-framed.jpg"
 			      "/wish-framed.jpg"))
-(defparameter *static-pages* (list *main* *exampleg* *icon* *manual* *display*))
+(defparameter *static-pages* (list *main* *exampleg* *examplelog* *icon* *manual* *display*))
 
 (defmacro get-local (p)
   `(first ,p))
