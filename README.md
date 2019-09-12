@@ -6,6 +6,6 @@ so cryptic about garbage-collection you avoid using it and end up garbage collec
 
 So, it's going to be SBCL (once again) running Portable AllegroServe, and no Allegro CL in between.
 
-I wouldn't even bother looking into this possibility if it weren't for Peter Seibel's CL code for web. Much obliged.
+I wouldn't even bother looking into this possibility if it weren't for Peter Seibel's Lisp code for web. Much obliged.
 
 Soon.
